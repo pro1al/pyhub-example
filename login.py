@@ -5,11 +5,10 @@ from PyQt5.QtWidgets import QMessageBox
 import subprocess, requests, time, os, sys, random
 import datetime as dt
 
-class Ui_MainWindow(object):
+class WindowResized(object):
     
-    def setupUi(self, MainWindow):
+    def frontEnd(self, MainWindow):
         
-        # Toda a Parte Gráfica foi Feita com PYSIDE2.DESIGNER!
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(600, 400)
         MainWindow.setMinimumSize(QtCore.QSize(600, 400))
@@ -110,14 +109,14 @@ class Ui_MainWindow(object):
         self.hardwareLabel.setText(_translate("MainWindow", "HARDWARE IDENTIFICATION"))
         self.backButton.setText(_translate("MainWindow", "<"))
 
-        # Chamada da Função "PROGRAM".
-        self.program(MainWindow)
+        # Chamada da Função "BACKEND".
+        self.backEnd(MainWindow)
 
         # Define a Pagina Inicial.
         self.stackedWidget.setCurrentIndex(0)
         
 
-    def program(self, MainWindow):
+    def backEnd(self, MainWindow):
 
         def debbugActions():
             clearDecals()
@@ -254,7 +253,7 @@ class Ui_MainWindow(object):
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
+    unity = WindowResized()
+    unity.frontEnd(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
