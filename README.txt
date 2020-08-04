@@ -2,6 +2,7 @@
 
 • Para total funcionamento, insira no PROMPT DE COMANDO todos os PIPS abaixo:
 
+> pip install requests
 > pip install pyqt5
 > pip install pyside2
 > pip install pywin32
