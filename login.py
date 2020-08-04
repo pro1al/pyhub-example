@@ -205,9 +205,9 @@ class Ui_MainWindow(object):
             if self.stackedWidget.currentIndex() == 0:
 
                 # Reliza Requests na Função "REQUESTSERVER"
-                serverUsers = requestServer('https://raw.githubusercontent.com/pro1al/anticheat/master/usernames.txt')
-                serverPassr = requestServer('https://raw.githubusercontent.com/pro1al/anticheat/master/passwords.txt')
-                serverHardw = requestServer('https://raw.githubusercontent.com/pro1al/anticheat/master/hwidchanges.txt')
+                serverUsers = requestServer('https://raw.githubusercontent.com/pro1al/pyhub-db/master/usernames.txt')
+                serverPassr = requestServer('https://raw.githubusercontent.com/pro1al/pyhub-db/master/passwords.txt')
+                serverHardw = requestServer('https://raw.githubusercontent.com/pro1al/pyhub-db/master/hwidchanges.txt')
 
                 # Realiza Requests nos Campos do Programa.
                 localUser = getUsername()
