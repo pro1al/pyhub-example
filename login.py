@@ -15,65 +15,80 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(600, 400))
         MainWindow.setMaximumSize(QtCore.QSize(600, 400))
         MainWindow.setWindowTitle('Exemplo Login using GitHub')
+        
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
         self.stackedWidget.setGeometry(QtCore.QRect(0, 0, 600, 400))
         self.stackedWidget.setObjectName("stackedWidget")
+        
         self.loginPage = QtWidgets.QWidget()
         self.loginPage.setObjectName("loginPage")
+        
         self.usernameEntry = QtWidgets.QLineEdit(self.loginPage)
         self.usernameEntry.setGeometry(QtCore.QRect(200, 110, 200, 20))
         self.usernameEntry.setAlignment(QtCore.Qt.AlignCenter)
         self.usernameEntry.setObjectName("usernameEntry")
+        
         self.passwordEntry = QtWidgets.QLineEdit(self.loginPage)
         self.passwordEntry.setGeometry(QtCore.QRect(200, 190, 200, 20))
         self.passwordEntry.setEchoMode(QtWidgets.QLineEdit.Password)
         self.passwordEntry.setAlignment(QtCore.Qt.AlignCenter)
         self.passwordEntry.setObjectName("passwordEntry")
+        
         self.usernameLabel = QtWidgets.QLabel(self.loginPage)
         self.usernameLabel.setGeometry(QtCore.QRect(203, 91, 61, 16))
         self.usernameLabel.setObjectName("usernameLabel")
         self.passwordLabel = QtWidgets.QLabel(self.loginPage)
         self.passwordLabel.setGeometry(QtCore.QRect(203, 171, 61, 16))
         self.passwordLabel.setObjectName("passwordLabel")
+        
         self.loginButton = QtWidgets.QPushButton(self.loginPage)
         self.loginButton.setGeometry(QtCore.QRect(238, 270, 125, 25))
         self.loginButton.setObjectName("loginButton")
+        
         self.stackedWidget.addWidget(self.loginPage)
         self.loggedPage = QtWidgets.QWidget()
         self.loggedPage.setObjectName("loggedPage")
+        
         self.loginStatus = QtWidgets.QLabel(self.loggedPage)
         self.loginStatus.setGeometry(QtCore.QRect(0, 385, 600, 15))
         self.loginStatus.setStyleSheet("background-color: rgb(170, 255, 0);")
         self.loginStatus.setObjectName("loginStatus")
+        
         self.hardwarePanel = QtWidgets.QLineEdit(self.loggedPage)
         self.hardwarePanel.setGeometry(QtCore.QRect(125, 259, 350, 30))
         self.hardwarePanel.setText("")
         self.hardwarePanel.setAlignment(QtCore.Qt.AlignCenter)
         self.hardwarePanel.setReadOnly(True)
         self.hardwarePanel.setObjectName("hardwarePanel")
+        
         self.datePanel = QtWidgets.QLineEdit(self.loggedPage)
         self.datePanel.setGeometry(QtCore.QRect(125, 180, 350, 30))
         self.datePanel.setText("")
         self.datePanel.setAlignment(QtCore.Qt.AlignCenter)
         self.datePanel.setReadOnly(True)
         self.datePanel.setObjectName("datePanel")
+        
         self.randomPanel = QtWidgets.QLineEdit(self.loggedPage)
         self.randomPanel.setGeometry(QtCore.QRect(126, 100, 350, 30))
         self.randomPanel.setText("")
         self.randomPanel.setAlignment(QtCore.Qt.AlignCenter)
         self.randomPanel.setReadOnly(True)
         self.randomPanel.setObjectName("randomPanel")
+        
         self.randomLabel = QtWidgets.QLabel(self.loggedPage)
         self.randomLabel.setGeometry(QtCore.QRect(129, 81, 111, 16))
         self.randomLabel.setObjectName("randomLabel")
+        
         self.dateLabel = QtWidgets.QLabel(self.loggedPage)
         self.dateLabel.setGeometry(QtCore.QRect(128, 161, 80, 16))
         self.dateLabel.setObjectName("dateLabel")
+        
         self.hardwareLabel = QtWidgets.QLabel(self.loggedPage)
         self.hardwareLabel.setGeometry(QtCore.QRect(128, 240, 151, 16))
         self.hardwareLabel.setObjectName("hardwareLabel")
+        
         self.backButton = QtWidgets.QPushButton(self.loggedPage)
         self.backButton.setGeometry(QtCore.QRect(15, 15, 25, 25))
         font = QtGui.QFont()
@@ -82,8 +97,10 @@ class Ui_MainWindow(object):
         self.backButton.setFont(font)
         self.backButton.setObjectName("backButton")
         self.stackedWidget.addWidget(self.loggedPage)
+        
         MainWindow.setCentralWidget(self.centralwidget)
         _translate = QtCore.QCoreApplication.translate
+        
         self.usernameLabel.setText(_translate("MainWindow", "USERNAME"))
         self.passwordLabel.setText(_translate("MainWindow", "PASSWORD"))
         self.loginButton.setText(_translate("MainWindow", "Login"))
